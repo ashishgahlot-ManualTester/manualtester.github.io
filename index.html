@@ -49,6 +49,50 @@
             line-height:1.8;
         }
 
+        .hero-buttons{
+            margin-top:35px;
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+        
+        .btn{
+            text-decoration:none;
+            padding:14px 28px;
+            border-radius:12px;
+            font-weight:600;
+            transition:0.3s;
+        }
+        
+        .btn-primary{
+            background:white;
+            color:#2563eb;
+        }
+        
+        .btn-primary:hover{
+            transform:translateY(-3px);
+        }
+        
+        .btn-secondary{
+            background:#7c3aed;
+            color:white;
+        }
+        
+        .btn-secondary:hover{
+            transform:translateY(-3px);
+        }
+        
+        .btn-outline{
+            border:2px solid white;
+            color:white;
+        }
+        
+        .btn-outline:hover{
+            background:white;
+            color:#2563eb;
+        }
+
         .stats{
             display:flex;
             justify-content:center;
@@ -164,6 +208,22 @@
         Finding Real Problems.
         Improving User Experience.
     </p>
+
+    <div class="hero-buttons">
+
+        <a href="projects.html" class="btn btn-primary">
+            View Projects
+        </a>
+    
+        <a href="bugreports.html" class="btn btn-secondary">
+            Bug Reports
+        </a>
+    
+        <a href="resume.html" class="btn btn-outline">
+            Resume
+        </a>
+    
+    </div>
 
 </div>
 
