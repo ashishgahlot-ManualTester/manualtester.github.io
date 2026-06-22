@@ -1,89 +1,97 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-<title>Projects</title>
-</head>
-
-<body>
-
-<h1>My Projects</h1>
-
-<!DOCTYPE html>
-
-<html>
-<head>
-<title>Projects - Ashish Gahlot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bug Reports Portfolio</title>
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
     margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
 }
 
-header{
-    background:#0d6efd;
+.header{
+    background:#dc3545;
     color:white;
     text-align:center;
-    padding:40px;
+    padding:30px;
+}
+
+.header h1{
+    margin:0;
+    font-size:40px;
 }
 
 .container{
     width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
+    margin:30px auto;
 }
 
-.project-card{
+table{
+    width:100%;
+    border-collapse:collapse;
     background:white;
-    margin-bottom:25px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0px 3px 12px rgba(0,0,0,0.1);
+    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
 }
 
-.project-card h2{
-    margin-top:0;
-    color:#0d6efd;
-}
-
-.project-card ul{
-    line-height:1.8;
-}
-
-.badge{
-    display:inline-block;
+th{
     background:#0d6efd;
     color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    margin-bottom:15px;
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:left;
 }
 
-.bug-links a{
-    display:inline-block;
-    margin:5px;
-    padding:10px 15px;
-    background:#198754;
-    color:white;
+td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f8f9fa;
+}
+
+.low{
+    color:green;
+    font-weight:bold;
+}
+
+.medium{
+    color:orange;
+    font-weight:bold;
+}
+
+.high{
+    color:red;
+    font-weight:bold;
+}
+
+.title-link{
     text-decoration:none;
-    border-radius:6px;
+    color:#0d6efd;
+    font-weight:bold;
 }
 
-.bug-links a:hover{
-    background:#146c43;
+.title-link:hover{
+    text-decoration:underline;
 }
 
-.back-home{
+.back-btn{
     display:inline-block;
     margin-top:20px;
     background:#0d6efd;
     color:white;
-    text-decoration:none;
     padding:12px 20px;
-    border-radius:6px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.back-btn:hover{
+    background:#0b5ed7;
 }
 
 </style>
@@ -92,96 +100,71 @@ header{
 
 <body>
 
-<header>
-    <h1>Projects</h1>
-    <p>Professional QA Testing Experience & Independent Testing Projects</p>
-</header>
+<div class="header">
+    <h1>Bug Reports Portfolio</h1>
+</div>
 
 <div class="container">
 
-```
-<div class="project-card">
+<table>
 
-    <span class="badge">Professional Experience</span>
+<tr>
+    <th>Date</th>
+    <th>S.No.</th>
+    <th>Domain</th>
+    <th>Title</th>
+    <th>Severity</th>
+    <th>Category</th>
+    <th>Status</th>
+</tr>
 
-    <h2>Larsen & Toubro Infotech (LTIMindtree)</h2>
+<tr>
+    <td>22-Jun-2026</td>
+    <td>1</td>
+    <td>YouTube</td>
+    <td>
+        <a class="title-link" href="youtube-bug-1.html">
+            Clickable area of Cross icon not clickable on Add another option field
+        </a>
+    </td>
+    <td class="medium">Medium</td>
+    <td>UI</td>
+    <td>Reported</td>
+</tr>
 
-    <ul>
-        <li>Worked as Manual QA Engineer</li>
-        <li>Performed Functional Testing</li>
-        <li>Performed Regression Testing</li>
-        <li>Executed Test Cases</li>
-        <li>Participated in Defect Reporting and Tracking</li>
-        <li>Reported and verified hundreds of defects during project lifecycle</li>
-        <li>Collaborated with developers and business stakeholders</li>
-    </ul>
+<tr>
+    <td>21-Jun-2026</td>
+    <td>2</td>
+    <td>Google Developer Program</td>
+    <td>
+        <a class="title-link" href="gdp-bug-1.html">
+            Read the Docs button redirects to invalid page
+        </a>
+    </td>
+    <td class="medium">Medium</td>
+    <td>Navigation</td>
+    <td>Submitted</td>
+</tr>
 
-</div>
+<tr>
+    <td>20-Jun-2026</td>
+    <td>3</td>
+    <td>Amazon</td>
+    <td>
+        <a class="title-link" href="amazon-bug-1.html">
+            Search results overlap on small screen resolution
+        </a>
+    </td>
+    <td class="low">Low</td>
+    <td>UI</td>
+    <td>Identified</td>
+</tr>
 
-<div class="project-card">
+</table>
 
-    <span class="badge">Personal Testing Project</span>
-
-    <h2>Amazon</h2>
-
-    <p>
-    Conducted exploratory testing on Amazon web platform and identified usability and functionality issues.
-    </p>
-
-    <div class="bug-links">
-        <a href="amazon-bug-1.html">Bug 1</a>
-        <a href="amazon-bug-2.html">Bug 2</a>
-        <a href="amazon-bug-3.html">Bug 3</a>
-    </div>
-
-</div>
-
-<div class="project-card">
-
-    <span class="badge">21 Bugs Reported</span>
-
-    <h2>YouTube</h2>
-
-    <p>
-    Performed exploratory, functionality and accessibility testing. Submitted findings through YouTube Feedback.
-    </p>
-
-    <div class="bug-links">
-        <a href="youtube-bug-1.html">Bug 1</a>
-        <a href="youtube-bug-2.html">Bug 2</a>
-        <a href="youtube-bug-3.html">Bug 3</a>
-    </div>
-
-</div>
-
-<div class="project-card">
-
-    <span class="badge">10 Bugs Reported</span>
-
-    <h2>Google Developer Program</h2>
-
-    <p>
-    Tested Google Developer websites and submitted issues through Google Issue Tracker.
-    </p>
-
-    <div class="bug-links">
-        <a href="gdp-bug-1.html">Bug 1</a>
-        <a href="gdp-bug-2.html">Bug 2</a>
-        <a href="gdp-bug-3.html">Bug 3</a>
-    </div>
+<a href="index.html" class="back-btn">← Back to Home</a>
 
 </div>
-
-<a class="back-home" href="index.html">← Back to Home</a>
-```
-
-</div>
-
-</body>
-</html>
-
-
-<a href="index.html">Back to Home</a>
 
 </body>
 </html>
