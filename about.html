@@ -120,15 +120,6 @@ nav a:hover{
     color:#2563eb;
 }
 
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
-    font-size:0.95rem;
-}
-
 nav a.active{
     color:#2563eb;
     font-weight:700;
@@ -144,6 +135,15 @@ nav a.active::after{
     height:3px;
     background:#2563eb;
     border-radius:10px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-size:0.95rem;
 }
     
 </style>
@@ -168,7 +168,7 @@ nav a.active::after{
 
 <nav>
     <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About</a>
+    <a href="about.html" class="active">👤 About</a>
     <a href="projects.html">📁 Projects</a>
     <a href="bugreports.html">🐞 Bug Reports</a>
     <a href="resume.html">📄 Resume</a>
