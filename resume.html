@@ -100,15 +100,80 @@ nav a:hover{
     color:#2563eb;
 }
 
+.resume-hero{
+    text-align:center;
+    padding:100px 20px 60px;
+}
+
+.resume-hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+.resume-hero p{
+    font-size:1.2rem;
+    color:#64748b;
+}
+
+.quote-section{
+    max-width:900px;
+    margin:50px auto;
+    text-align:center;
+    padding:40px;
+}
+
+.quote-section blockquote{
+    font-size:2rem;
+    font-weight:600;
+    color:#2563eb;
+    line-height:1.6;
+    font-style:italic;
+}
+
+.quote-section p{
+    margin-top:20px;
+    color:#64748b;
+}
+
+.resume-download{
+    text-align:center;
+    margin:50px 0 100px;
+}
+
+.resume-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.resume-btn:hover{
+    transform:translateY(-3px);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="header">
+<section class="resume-hero">
+
     <h1>Resume</h1>
-</div>
+
+    <p>
+        Software Quality Assurance Professional with 3.8+ Years of Experience
+    </p>
+
+</section>
 
 <nav>
     <a href="index.html">🏠 Home</a>
@@ -119,63 +184,31 @@ nav a:hover{
     <a href="contact.html">📬 Contact</a>
 </nav>
 
+<section class="quote-section">
+
+    <blockquote>
+        "Most people enjoy finding mistakes in others' work. As a Software Tester, I get paid to do it professionally."
+    </blockquote>
+
+    <p>— Ashish Gahlot</p>
+
+</section>
+
 <div class="container">
 
 <div class="card">
 
-<h2>Professional Profile</h2>
+<section class="resume-download">
 
-<p>
-Software Quality Assurance Professional with 3.8 years of experience in Manual Testing, defect reporting, defect validation, and software quality assurance.
-</p>
+    <a href="Ashish_Gahlot_Resume.pdf"
+       download
+       class="resume-btn">
 
-<p>
-Experienced in Functional Testing, Smoke Testing, Sanity Testing, Accessibility Testing, Cross-Browser Testing, Ad-hoc Testing, and Sync & Migration Testing.
-</p>
+        📄 Download Resume
 
-</div>
+    </a>
 
-<div class="card">
-
-<h2>Core Skills</h2>
-
-<ul>
-<li>Manual Testing</li>
-<li>Functional Testing</li>
-<li>Regression Testing</li>
-<li>Smoke Testing</li>
-<li>Sanity Testing</li>
-<li>Accessibility Testing</li>
-<li>Cross-Browser Testing</li>
-<li>Bug Reporting & Tracking</li>
-<li>SDLC & STLC</li>
-<li>Agile Methodology</li>
-<li>Azure DevOps</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Professional Experience</h2>
-
-<p>
-Manual QA Engineer with experience working on the Microsoft Edge Browser project, focusing on software quality assurance, defect identification, bug reporting, validation, and release quality.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Download Resume</h2>
-
-<p>
-Click the button below to download my latest resume.
-</p>
-
-<a href="CV.pdf" class="download-btn">
-Download Resume
-</a>
+</section>
 
 </div>
 
