@@ -1,180 +1,317 @@
+```html
 <!DOCTYPE html>
-<html>
-<head>
-<title>Projects</title>
-</head>
-
-<body>
-
-<!DOCTYPE html>
-
 <html>
 <head>
 <title>Projects - Ashish Gahlot</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header{
-    background:#0d6efd;
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f8fafc;
+    color:#333;
+}
+
+/* Hero Section */
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
     color:white;
     text-align:center;
-    padding:40px;
+    padding:80px 20px;
 }
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:1.2rem;
+}
+
+/* Container */
 
 .container{
     width:90%;
     max-width:1200px;
-    margin:auto;
-    padding:30px;
+    margin:50px auto;
 }
+
+/* Grid */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+/* Project Card */
 
 .project-card{
     background:white;
-    margin-bottom:25px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0px 3px 12px rgba(0,0,0,0.1);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:all .3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
 }
 
 .project-card h2{
-    margin-top:0;
-    color:#0d6efd;
+    color:#2563eb;
+    margin-bottom:8px;
 }
 
-.project-card ul{
-    line-height:1.8;
+.subtitle{
+    color:#64748b;
+    font-weight:500;
+    margin-bottom:20px;
 }
+
+/* Badges */
 
 .badge{
     display:inline-block;
-    background:#0d6efd;
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    margin-bottom:15px;
+    padding:8px 14px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
-.bug-links a{
+.badge-professional{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.badge-youtube{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.badge-google{
+    background:#ede9fe;
+    color:#7c3aed;
+}
+
+.badge-amazon{
+    background:#dbeafe;
+    color:#0284c7;
+}
+
+/* Lists */
+
+.project-card ul{
+    padding-left:20px;
+    line-height:2;
+    margin-bottom:20px;
+}
+
+/* Highlight Number */
+
+.highlight{
+    background:#f8fafc;
+    border-left:4px solid #2563eb;
+    padding:15px;
+    border-radius:10px;
+    margin-top:15px;
+    font-weight:600;
+}
+
+/* Buttons */
+
+.btn{
     display:inline-block;
-    margin:5px;
-    padding:10px 15px;
-    background:#198754;
-    color:white;
     text-decoration:none;
-    border-radius:6px;
+    background:#2563eb;
+    color:white;
+    padding:12px 22px;
+    border-radius:12px;
+    margin-top:20px;
+    transition:.3s;
+    font-weight:600;
 }
 
-.bug-links a:hover{
-    background:#146c43;
+.btn:hover{
+    background:#1d4ed8;
 }
+
+/* Back Button */
 
 .back-home{
-    display:inline-block;
-    margin-top:20px;
-    background:#0d6efd;
-    color:white;
+    text-align:center;
+    margin-top:50px;
+}
+
+.back-home a{
     text-decoration:none;
-    padding:12px 20px;
-    border-radius:6px;
+    background:#0f172a;
+    color:white;
+    padding:14px 24px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.back-home a:hover{
+    background:#1e293b;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-    <h1>Projects</h1>
-    <p>Professional QA Testing Experience & Independent Testing Projects</p>
-</header>
+<div class="hero">
+    <h1>PROJECTS</h1>
+    <p>Real Testing Experience • Manual QA Engineer</p>
+</div>
 
 <div class="container">
 
-<div class="project-card">
+<div class="projects-grid">
 
-    <span class="badge">Professional Experience</span>
-
-    <h2>Larsen & Toubro Infotech (LTIMindtree)</h2>
-
-    <ul>
-        <li>Worked as Manual QA Engineer</li>
-        <li>Performed Functional Testing</li>
-        <li>Performed Regression Testing</li>
-        <li>Executed Test Cases</li>
-        <li>Participated in Defect Reporting and Tracking</li>
-        <li>Reported and verified hundreds of defects during project lifecycle</li>
-        <li>Collaborated with developers and business stakeholders</li>
-    </ul>
-
-</div>
+<!-- L&T -->
 
 <div class="project-card">
 
-    <span class="badge">Personal Testing Project</span>
+<span class="badge badge-professional">
+Professional Experience
+</span>
 
-    <h2>Amazon</h2>
+<h2>Larsen & Toubro Infotech (LTIMindtree)</h2>
 
-    <p>
-    Conducted exploratory testing on Amazon web platform and identified usability and functionality issues.
-    </p>
+<div class="subtitle">
+Microsoft Edge Browser (msedge Compat Project)
+</div>
 
-    <div class="bug-links">
-        <a href="amazon-bug-1.html">Bug 1</a>
-        <a href="amazon-bug-2.html">Bug 2</a>
-        <a href="amazon-bug-3.html">Bug 3</a>
-    </div>
+<ul>
+<li>Smoke Testing</li>
+<li>Sanity Testing</li>
+<li>Sync & Migration Testing</li>
+<li>Ad-hoc Testing</li>
+<li>Bug Reporting</li>
+<li>Defect Validation</li>
+</ul>
+
+<div class="highlight">
+400+ Bugs Reported<br>
+Most defects were resolved as Fixed.
+</div>
 
 </div>
+
+<!-- YouTube -->
 
 <div class="project-card">
 
-    <span class="badge">Personal Testing Project</span>
+<span class="badge badge-youtube">
+21 Bugs
+</span>
 
-    <h2>YouTube</h2>
+<h2>YouTube</h2>
 
-    <p>
-    Performed exploratory, functionality and accessibility testing. Submitted findings through YouTube Feedback.
-    </p>
+<div class="subtitle">
+Independent Bug Reporting
+</div>
 
-    <div class="bug-links">
-        <a href="youtube-bug-1.html">Bug 1</a>
-        <a href="youtube-bug-2.html">Bug 2</a>
-        <a href="youtube-bug-3.html">Bug 3</a>
-    </div>
+<ul>
+<li>Functional Testing</li>
+<li>Accessibility Testing</li>
+<li>UI Testing</li>
+<li>User Experience Testing</li>
+</ul>
+
+<p>
+Submitted findings through YouTube Feedback.
+</p>
+
+<a href="bugreports.html" class="btn">
+View Bugs →
+</a>
 
 </div>
+
+<!-- Google -->
 
 <div class="project-card">
 
-    <span class="badge">Personal Testing Project</span>
+<span class="badge badge-google">
+10 Bugs Active
+</span>
 
-    <h2>Google Developer Program</h2>
+<h2>Google Developer Program</h2>
 
-    <p>
-    Tested Google Developer websites and submitted issues through Google Issue Tracker.
-    </p>
+<div class="subtitle">
+Independent Bug Reporting
+</div>
 
-    <div class="bug-links">
-        <a href="gdp-bug-1.html">Bug 1</a>
-        <a href="gdp-bug-2.html">Bug 2</a>
-        <a href="gdp-bug-3.html">Bug 3</a>
-    </div>
+<ul>
+<li>Functional Testing</li>
+<li>UI Testing</li>
+<li>Accessibility Testing</li>
+<li>Navigation Testing</li>
+</ul>
+
+<p>
+Still actively reporting issues through Google Issue Tracker.
+</p>
+
+<a href="bugreports.html" class="btn">
+View Bugs →
+</a>
 
 </div>
 
-<a class="back-home" href="index.html">← Back to Home</a>
+<!-- Amazon -->
+
+<div class="project-card">
+
+<span class="badge badge-amazon">
+3 Bugs
+</span>
+
+<h2>Amazon</h2>
+
+<div class="subtitle">
+Personal Testing Project
+</div>
+
+<ul>
+<li>Functional Testing</li>
+<li>UI Validation</li>
+<li>User Journey Testing</li>
+</ul>
+
+<p>
+Testing discontinued due to lack of an appropriate reporting channel.
+</p>
+
+<a href="bugreports.html" class="btn">
+View Bugs →
+</a>
+
+</div>
+
+</div>
+
+<div class="back-home">
+    <a href="index.html">← Back to Home</a>
+</div>
 
 </div>
 
 </body>
 </html>
-
-</body>
-</html>
+```
