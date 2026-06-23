@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <title>About Me | Ashish Gahlot</title>
 
@@ -119,7 +120,32 @@ nav a:hover{
     color:#2563eb;
 }
 
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-size:0.95rem;
+}
 
+nav a.active{
+    color:#2563eb;
+    font-weight:700;
+    position:relative;
+}
+
+nav a.active::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:3px;
+    background:#2563eb;
+    border-radius:10px;
+}
+    
 </style>
 
 </head>
@@ -273,4 +299,8 @@ Currently seeking Remote / Work From Home opportunities in Manual Testing, QA, S
 </div>
 
 </body>
+
+<footer>
+    <p>© 2026 Ashish Gahlot | Software Quality Assurance Professional</p>
+</footer>
 </html>
