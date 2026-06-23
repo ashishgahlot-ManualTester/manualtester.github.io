@@ -117,6 +117,60 @@ nav a{
 nav a:hover{
     color:#2563eb;
 }
+
+.meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.meta-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.meta-label{
+    display:block;
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.meta-card h3{
+    color:#2563eb;
+    font-size:1.4rem;
+    margin-bottom:5px;
+}
+
+.meta-card p{
+    color:#475569;
+    font-weight:500;
+}
+
+.sev0 h3{
+    color:#dc2626;
+}
+
+.sev1 h3{
+    color:#ea580c;
+}
+
+.sev2 h3{
+    color:#ca8a04;
+}
+
+.sev3 h3{
+    color:#2563eb;
+}
+
+.sev4 h3{
+    color:#16a34a;
+}
     
 </style>
 
@@ -145,6 +199,31 @@ nav a:hover{
 <div class="section">
 <span class="label">Title</span>
 Clickable area of Cross (Remove) icon not clickable on "Add another option" field
+</div>
+
+<div class="meta-grid">
+
+    <div class="meta-card sev3">
+        <span class="meta-label">Severity</span>
+        <h3>3</h3>
+        <p>Low</p>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Category</span>
+        <h3>UI</h3>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Status</span>
+        <h3>Reported</h3>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Date</span>
+        <h3>22-Jun-2026</h3>
+    </div>
+
 </div>
 
 <div class="section">
