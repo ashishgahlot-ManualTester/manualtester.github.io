@@ -179,7 +179,7 @@ nav a:hover{
 
 .title-label{
     color:#2563eb;
-    font-size:14px;
+    font-size:16px;
     font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
@@ -187,12 +187,48 @@ nav a:hover{
 }
 
 .bug-title{
-    font-size:2rem;
+    font-size:1.3rem;
     font-weight:700;
     color:#0f172a;
     line-height:1.4;
     max-width:900px;
     margin:0 auto;
+}
+
+.info-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-top:30px;
+}
+
+.info-card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.environment-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.env-item{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:12px;
+}
+
+.env-item span{
+    display:block;
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.env-item strong{
+    color:#0f172a;
 }
     
 </style>
@@ -258,9 +294,29 @@ nav a:hover{
 
 </div>
 
-<div class="section">
-<span class="label">Environment</span>
-Google Chrome, Microsoft Edge, Windows 11
+<div class="info-card">
+
+    <h2>🌐 Environment</h2>
+
+    <div class="environment-grid">
+
+        <div class="env-item">
+            <span>Browser</span>
+            <strong>Chrome 138</strong>
+        </div>
+
+        <div class="env-item">
+            <span>Operating System</span>
+            <strong>Windows 10</strong>
+        </div>
+
+        <div class="env-item">
+            <span>Device</span>
+            <strong>Desktop</strong>
+        </div>
+
+    </div>
+
 </div>
 
 <div class="section">
