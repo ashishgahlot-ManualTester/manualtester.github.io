@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>YouTube Bug Report</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f4f6f9;
+}
+
+.header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.header h1{
+    margin:0;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.section{
+    margin-bottom:20px;
+}
+
+.label{
+    font-weight:bold;
+    color:#0d6efd;
+    display:block;
+    margin-bottom:5px;
+}
+
+.low{
+    color:green;
+    font-weight:bold;
+}
+
+.medium{
+    color:orange;
+    font-weight:bold;
+}
+
+.high{
+    color:red;
+    font-weight:bold;
+}
+
+.critical{
+    color:darkred;
+    font-weight:bold;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.back-btn:hover{
+    background:#0b5ed7;
+}
+
+ol{
+    line-height:1.8;
+}
+
+img{
+    max-width:100%;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+nav{
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    padding:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0f172a;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+.meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.meta-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.meta-label{
+    display:block;
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.meta-card h3{
+    color:#2563eb;
+    font-size:1.4rem;
+    margin-bottom:5px;
+}
+
+.meta-card p{
+    color:#475569;
+    font-weight:500;
+}
+
+.sev0 h3{
+    color:#dc2626;
+}
+
+.sev1 h3{
+    color:#ea580c;
+}
+
+.sev2 h3{
+    color:#ca8a04;
+}
+
+.sev3 h3{
+    color:#2563eb;
+}
+
+.sev4 h3{
+    color:#16a34a;
+}
+
+.bug-title-section{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title-label{
+    color:#2563eb;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.bug-title{
+    font-size:1.3rem;
+    font-weight:700;
+    color:#0f172a;
+    line-height:1.4;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.info-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-top:30px;
+}
+
+.info-card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.environment-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.env-item{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:12px;
+}
+
+.env-item span{
+    display:block;
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.env-item strong{
+    color:#0f172a;
+}
+
+.prereq-list{
+    padding-left:20px;
+    line-height:2;
+}
+
+.prereq-list li{
+    color:#334155;
+}
+
+.step{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f8fafc;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+.step-number{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.result-card{
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.expected{
+    background:#f0fdf4;
+}
+
+.actual{
+    background:#fef2f2;
+}
+
+.result-card h2{
+    margin-bottom:15px;
+}
+
+.notes-card{
+    background:#eff6ff;
+    padding:25px;
+    border-radius:20px;
+    margin-top:30px;
+    border-left:5px solid #2563eb;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.notes-card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.notes-card ul{
+    padding-left:20px;
+    line-height:2;
+}
+
+.screenshot-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.screenshot-card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.screenshot-card img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid #e2e8f0;
+}
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-size:0.95rem;
+}
+@media (max-width:768px){
+
+    nav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .hero h1,
+    .resume-hero h1,
+    .contact-hero h1{
+        font-size:2rem;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+    
+</style>
+
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>BUG REPORT</h1>
+    <p>Detailed Defect Documentation</p>
+</div>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About</a>
+    <a href="projects.html">📁 Projects</a>
+    <a href="bugreports.html">🐞 Bug Reports</a>
+    <a href="resume.html">📄 Resume</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<div class="bug-title-section">
+
+    <div class="title-label">
+        BUG TITLE
+    </div>
+
+    <h1 class="bug-title">
+        Clickable area of Cross (Remove) icon not clickable on
+        "Add another option" field
+    </h1>
+
+</div>
+
+<div class="meta-grid">
+
+    <div class="meta-card sev3">
+        <span class="meta-label">Severity</span>
+        <h3>3</h3>
+        <p>Low</p>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Category</span>
+        <h3>UI</h3>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Status</span>
+        <h3>Reported</h3>
+    </div>
+
+    <div class="meta-card">
+        <span class="meta-label">Date</span>
+        <h3>22-Jun-2026</h3>
+    </div>
+
+</div>
+
+<div class="info-card">
+
+    <h2>🌐 Environment</h2>
+
+    <div class="environment-grid">
+
+        <div class="env-item">
+            <span>Browser</span>
+            <strong>Chrome</strong>
+        </div>
+
+        <div class="env-item">
+            <span>Operating System</span>
+            <strong>Windows 10</strong>
+        </div>
+
+        <div class="env-item">
+            <span>Device</span>
+            <strong>Desktop</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="info-card">
+
+    <h2>🔐 Pre-Requisite</h2>
+
+    <ul class="prereq-list">
+        <li>User must be logged into YouTube.</li>
+        <li>Community Post creation page should be open.</li>
+        <li>Text Poll option should be selected.</li>
+    </ul>
+
+</div>
+
+<div class="info-card">
+
+    <h2>📝 Steps to Reproduce</h2>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        Open YouTube.
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        Navigate to Community Post.
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        Select Text Poll.
+    </div>
+
+    <div class="step">
+        <span class="step-number">4</span>
+        Click "Add another option".
+    </div>
+
+    <div class="step">
+        <span class="step-number">5</span>
+        Hover over the Remove icon.
+    </div>
+
+    <div class="step">
+        <span class="step-number">6</span>
+        Observe the issue.
+    </div>
+
+</div>
+
+<div class="result-grid">
+
+    <div class="result-card expected">
+
+        <h2>✅ Expected Result</h2>
+
+        <p>
+        Cross (Remove) icon should be completely clickable
+        and remove the corresponding poll option when clicked.
+        </p>
+
+    </div>
+
+    <div class="result-card actual">
+
+        <h2>❌ Actual Result</h2>
+
+        <p>
+        Only a small portion of the Cross (Remove) icon is
+        clickable, making it difficult for users to remove
+        the poll option.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="notes-card">
+
+    <h2>💡 Notes</h2>
+
+    <ul>
+        <li>Issue occurs consistently.</li>
+
+        <li>Observed in both Chrome and Microsoft Edge.</li>
+
+        <li>Clickable target appears smaller than the visible icon boundary.</li>
+
+        <li>May affect users attempting to quickly remove poll options.</li>
+    </ul>
+
+</div>
+
+<div class="screenshot-card">
+
+    <h2>📷 Screenshot Evidence</h2>
+
+    <img src="images/bug1.png"
+         alt="Bug Screenshot">
+
+</div>
+
+<div class="back-section">
+    <a href="bugreports.html" class="back-btn">
+        ← Back to Bug Reports
+    </a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+<footer>
+    <p>© 2026 Ashish Gahlot | Software Quality Assurance Professional</p>
+</footer>
+</html>
