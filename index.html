@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Ashish Gahlot - QA Portfolio</title>
+<title>Ashish Gahlot - QA Portfolio</title>
 
     <style>
 
@@ -210,6 +211,23 @@
         
         nav a:hover{
             color:#2563eb;
+        }
+
+        nav a.active{
+            color:#2563eb;
+            font-weight:700;
+            position:relative;
+        }
+        
+        nav a.active::after{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:-6px;
+            width:100%;
+            height:3px;
+            background:#2563eb;
+            border-radius:10px;
         }
 
     </style>
