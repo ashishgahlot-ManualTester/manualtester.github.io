@@ -4,13 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <title>Contact | Ashish Gahlot</title>
 
 <style>
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
     background:#f4f6f9;
 }
 
@@ -101,15 +102,81 @@ nav a:hover{
     color:#2563eb;
 }
 
+.contact-hero{
+    text-align:center;
+    padding:80px 20px 40px;
+}
+
+.contact-hero h1{
+    font-size:3rem;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.contact-hero p{
+    color:#64748b;
+    font-size:1.1rem;
+}
+
+.contact-grid{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+}
+
+.contact-card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.contact-card a{
+    text-decoration:none;
+    color:#0f172a;
+    font-weight:600;
+}
+
+.contact-message{
+    max-width:800px;
+    margin:60px auto;
+    text-align:center;
+    padding:20px;
+}
+
+.contact-message h2{
+    color:#2563eb;
+}
+
+.contact-message p{
+    color:#475569;
+    line-height:1.8;
+}
+    
 </style>
 
 </head>
 
 <body>
 
-<div class="header">
-    <h1>Contact</h1>
-</div>
+<section class="contact-hero">
+    <h1>Contact Me</h1>
+    <p>Open to Remote, Work From Home, and Quality Assurance Opportunities</p>
+</section>
 
 <nav>
     <a href="index.html">🏠 Home</a>
@@ -122,37 +189,41 @@ nav a:hover{
 
 <div class="container">
 
-<div class="card">
+<section class="contact-message">
 
-<h2>Get In Touch</h2>
+    <h2>Let's Connect</h2>
 
-<p>
-Thank you for visiting my QA Portfolio. Feel free to connect with me regarding Manual Testing, Quality Assurance, Remote Opportunities, or Professional Networking.
-</p>
+    <p>
+        If you're looking for a detail-oriented Manual QA Engineer
+        passionate about software quality, testing, and user experience,
+        I'd be happy to discuss opportunities and collaborations.
+    </p>
 
-<div class="contact-item">
-<span class="label">Email</span>
-<a class="contact-link" href="mailto:ashish007gahlot@gmail.com">
-ashish007gahlot@gmail.com
-</a>
-</div>
+</section>
 
-<div class="contact-item">
-<span class="label">LinkedIn</span>
-<a class="contact-link"
-href="https://www.linkedin.com/in/ashish-gahlot-9787452ab"
-target="_blank">
-www.linkedin.com/in/ashish-gahlot-9787452ab
-</a>
-</div>
+<div class="contact-grid">
 
-<div class="contact-item">
-<span class="label">GitHub Portfolio Repository</span>
-<a class="contact-link"
-href="https://github.com/ashishgahlot-ManualTester/manualtester.github.io"
-target="_blank">
-github.com/ashishgahlot-ManualTester/manualtester.github.io
-</a>
+    <div class="contact-card">
+        <h2>📧 Email</h2>
+        <a href="mailto:ashish007gahlot@gmail.com">
+            ashish007gahlot@gmail.com
+        </a>
+    </div>
+
+    <div class="contact-card">
+        <h2>💼 LinkedIn</h2>
+        <a href="https://www.linkedin.com/in/ashish-gahlot-9787452ab" target="_blank">
+            View LinkedIn Profile
+        </a>
+    </div>
+
+    <div class="contact-card">
+        <h2>💻 GitHub</h2>
+        <a href="https://ashishgahlot-manualtester.github.io/manualtester.github.io/index.html" target="_blank">
+            View GitHub Portfolio
+        </a>
+    </div>
+
 </div>
 
 </div>
