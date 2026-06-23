@@ -179,6 +179,29 @@ nav a.active::after{
     margin:40px 0 80px;
 }
 
+@media (max-width:768px){
+
+    nav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .hero h1,
+    .resume-hero h1,
+    .contact-hero h1{
+        font-size:2rem;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
 </style>
 
 </head>
