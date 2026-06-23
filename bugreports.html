@@ -4,26 +4,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <title>Bug Reports Portfolio</title>
 
 <style>
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
     background:#f4f6f9;
 }
 
 .header{
-    background:#dc3545;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
     color:white;
     text-align:center;
-    padding:30px;
+    padding:80px 20px;
 }
 
 .header h1{
     margin:0;
-    font-size:40px;
+    font-size:3.5rem;
+    font-weight:800;
 }
 
 .container{
@@ -31,6 +33,14 @@ body{
     margin:30px auto;
 }
 
+.table-container{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    overflow-x:auto;
+}
+    
 table{
     width:100%;
     border-collapse:collapse;
@@ -128,6 +138,28 @@ nav a:hover{
     color:#2563eb;
 }
 
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.submitted{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.progress{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.resolved{
+    background:#dcfce7;
+    color:#15803d;
+}
+
 </style>
 
 </head>
@@ -135,7 +167,8 @@ nav a:hover{
 <body>
 
 <div class="header">
-    <h1>Bug Reports Portfolio</h1>
+    <h1>BUG REPORTS</h1>
+    <p>Real Defects Identified Through Professional & Independent Testing</p>
 </div>
 
 <nav>
@@ -147,7 +180,31 @@ nav a:hover{
     <a href="contact.html">📬 Contact</a>
 </nav>
 
-<div class="container">
+<div class="stats">
+
+<div class="stat-card">
+<h3>36+</h3>
+<p>Documented Bugs</p>
+</div>
+
+<div class="stat-card">
+<h3>21</h3>
+<p>YouTube Bugs</p>
+</div>
+
+<div class="stat-card">
+<h3>10</h3>
+<p>Active Google Bugs</p>
+</div>
+
+<div class="stat-card">
+<h3>3</h3>
+<p>Amazon Bugs</p>
+</div>
+
+</div>
+
+<div class="table-container">
 
 <table>
 
@@ -172,7 +229,7 @@ nav a:hover{
     </td>
     <td class="critical">0 (Critical)</td>
     <td>UI</td>
-    <td>Reported</td>
+    <td><span class="submitted">Submitted</span></td>
 </tr>
 
 <tr>
@@ -186,7 +243,7 @@ nav a:hover{
     </td>
     <td class="high">1 (High)</td>
     <td>Navigation</td>
-    <td>Submitted</td>
+    <td><span class="progress">In Progress</span></td>
 </tr>
 
 <tr>
@@ -200,7 +257,7 @@ nav a:hover{
     </td>
     <td class="medium">2 (Medium)</td>
     <td>UI</td>
-    <td>Identified</td>
+    <td><span class="resolved">Resolved</span></td>
 </tr>
 
 <tr>
