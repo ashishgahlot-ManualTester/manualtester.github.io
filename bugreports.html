@@ -218,6 +218,43 @@ nav a.active::after{
     color:#64748b;
     font-weight:500;
 }
+
+.filter-section{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto 25px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:12px;
+}
+
+.filter-section label{
+    font-weight:600;
+    color:#334155;
+}
+
+.filter-section select{
+    padding:10px 14px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-size:15px;
+    font-family:'Poppins',sans-serif;
+    background:white;
+    cursor:pointer;
+    outline:none;
+    transition:.3s;
+}
+
+.filter-section select:hover{
+    border-color:#2563eb;
+}
+
+.filter-section select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}	
+
 footer{
     background:#0f172a;
     color:white;
@@ -271,31 +308,46 @@ footer{
 
 <div class="stats">
 
-<div class="stat-card">
-<h3>46+</h3>
-<p>Documented Bugs</p>
+	<div class="stat-card">
+	<h3>46+</h3>
+	<p>Documented Bugs</p>
+	</div>
+
+	<div class="stat-card">
+	<h3>21</h3>
+	<p>YouTube Bugs</p>
+	</div>
+
+	<div class="stat-card">
+	<h3>22</h3>
+	<p>Active Google Bugs</p>
+	</div>
+
+	<div class="stat-card">
+	<h3>3</h3>
+	<p>Amazon Bugs</p>
+	</div>
+
 </div>
 
-<div class="stat-card">
-<h3>21</h3>
-<p>YouTube Bugs</p>
-</div>
+<div class="filter-section">
 
-<div class="stat-card">
-<h3>22</h3>
-<p>Active Google Bugs</p>
-</div>
+    <label for="domainFilter">Filter by Domain</label>
 
-<div class="stat-card">
-<h3>3</h3>
-<p>Amazon Bugs</p>
-</div>
+    <select id="domainFilter">
+        <option value="all">All Bugs</option>
+        <option value="Google Developer Program" selected>
+            Google Developer Program
+        </option>
+        <option value="YouTube">YouTube</option>
+        <option value="Amazon">Amazon</option>
+    </select>
 
 </div>
 
 <div class="table-container">
 
-<table>
+<table id="bugTable">
 
 <tr>
     <th>Date</th>
@@ -1053,4 +1105,39 @@ footer{
 <footer>
     <p>© 2026 Ashish Gahlot | Software Quality Assurance Professional</p>
 </footer>
+
+<script>
+
+const filter = document.getElementById("domainFilter");
+const rows = document.querySelectorAll("#bugTable tr");
+
+function filterBugs(){
+
+    const selected = filter.value;
+
+    rows.forEach((row,index)=>{
+
+        if(index===0) return;
+
+        const domain = row.cells[2].textContent.trim();
+
+        if(selected==="all" || domain===selected){
+
+            row.style.display="";
+
+        }else{
+
+            row.style.display="none";
+
+        }
+
+    });
+
+}
+
+filterBugs();
+
+filter.addEventListener("change",filterBugs);
+
+</script>
 </html>
